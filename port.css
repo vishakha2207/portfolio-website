@@ -1,0 +1,262 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* color:rgb(53, 52, 52); */
+}
+html,body{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background-color: aqua; */
+}
+#main{
+    /* height: 100%;  dont giv height cause locomotive*/
+    width: 100%;
+    /* background-color: rgb(53, 53, 53); */
+    color: white;
+}
+#loader{
+    position: fixed;
+    position: none;
+    height: 100vh; 
+    /* we cant give height in % beacuse its parent does not have any height*/
+    width: 100%;
+    background-color:#111;
+    z-index: 9999;
+    color: white;
+}
+#loader #topheading{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+#topheading h5{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300;
+}
+.reveal .parent{
+    width: 100%;
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.reveal .parent .child{
+    display: block;
+    transform: translateY(0%);
+}
+
+.parent .child span{
+    display: inline-block;
+}
+#loader h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    font-weight: 500;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+#green{
+    background-color: #14CF93;
+    /* position: absolute; */
+    /* position: absolute; */
+    width: 100%;
+    height: 100vh;
+    top: 0%;
+    /* z-index: 999; */
+}
+#home{
+    position: relative;
+    width: 100%;
+    height: 150vh;
+}
+#home>#nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0vw 5vw;
+    width: 100%;
+    /* height: 100px; */
+    
+}
+#nav>a{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14;
+    color: #111;
+}
+#nav>a .line{
+    bottom: 0;
+    right: 0;
+    position:absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #111;
+    transition:cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+}
+#nav>a:hover .line{
+    width: 0;
+}
+
+.row-1{
+    margin-top: 5vw;
+    color:rgb(53, 52, 52);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.7vw;
+    padding-right: 12vw;
+    line-height: 1;
+    
+}
+.row-1>h1{
+    
+    font-size: 11vw;
+    font-weight:550;
+
+}
+.text>h5{
+    opacity: 0.5;
+    font-size: 11px;
+    font-weight: 500;
+}
+.row-1:nth-child(3){
+    margin: 0;
+}
+#row{
+    padding-top:10vw;
+    justify-content:space-evenly;
+}
+#row-2{
+    justify-content: end;
+}
+.imagery{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.7vw;
+    color: black;
+    margin-top: 17vw;
+}
+.imglef{
+    margin-left: 10vw;
+    
+    /* text-align: start; */
+}
+.imglef>h1{
+    font-size: 2.2vw;
+    font-weight: 500;
+    letter-spacing: 1px;
+    
+}
+.imglef>h1>span{
+    color: #14CF93;
+    font-style: italic;
+}
+.imgrig{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    /* left: 5%; */
+    height: auto;
+    background-color: rebeccapurple;
+}
+.imgctnr{
+   position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */ 
+    width: 27vw;
+    left: 35%;
+    height: 30vw;
+    border-radius: 1vw;
+    filter:grayscale();
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s; */
+    background-color: red;
+}
+.imgrig:hover{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.2s;
+}
+.imgrig .imgctnr:hover{
+    
+    filter:grayscale(0);
+    
+}
+.imgrig .imgctnr:nth-child(1){
+    transform:translate(-30%,-10%)rotate(-20deg);
+    background-image: url("https://images.unsplash.com/photo-1682685797703-2bb22dbb885b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-position: center;
+}
+.imgrig .imgctnr:nth-child(2){
+    transform:translate(-2%,0%)rotate(-15deg);
+    background-image: url("https://plus.unsplash.com/premium_photo-1691591182467-b5ffdf32c1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3N3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-position: center;
+}
+.imgrig .imgctnr:nth-child(3){
+    transform:translate(20%,10%)rotate(-5deg);
+    background-image: url("https://images.unsplash.com/photo-1682685797741-f0213d24418c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0Nnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-position: center;
+}
+.work{
+    width: 100%;
+    height: 40vw;
+    background-color: rgb(233, 232, 232);
+    padding-top: 10vw;
+    
+}
+.workrow{
+    padding: 0 12vw;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.workrow>h1{
+    font-size: 6vw;
+    font-weight: 300;
+    color:rgb(53, 52, 52);
+}
+.workrow>h1>span{
+    color: #14CF93;
+    font-style: italic;
+}
+.images{
+    /* display: flex; */
+    justify-content: space-between;
+    margin-top: 6vw;
+    position: relative;
+    width: 100%;
+    padding: 0 5vw;
+}
+.cnt1{
+    /* overflow: hidden; */
+    border-radius: 50px;
+    width: 50%;
+}
+.cnt1>img{
+    width: 50%;
+}
+.cnt2{
+    width: 35%;
+}
